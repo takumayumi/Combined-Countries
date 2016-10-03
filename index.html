@@ -4,56 +4,18 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Canada and USA</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<script src="http://d3js.org/topojson.v1.min.js"></script>
 	<script src="http://rawgithub.com/markmarkoh/datamaps/master/dist/datamaps.none.min.js"></script>
+	<script src="script.js"></script>
 </head>
 <body>
 	<!-- CANADA -->
 	<h1>CANADA</h1>
 	<div id="canada"></div>
-	<script type="text/javascript">
-	    var map = new Datamap({
-			element: document.getElementById('canada'),
-			geographyConfig: {
-				dataUrl: 'canada.topo.json'
-			},
-			scope: 'canada',
-			fills: {
-				defaultFill: '#bada55'
-			},
-			setProjection: function(element) {
-				var projection = d3.geo.mercator()
-					.center([-95, 71])
-					.scale(200)
-					.translate([element.offsetWidth / 2, element.offsetHeight / 2]);
-				var path = d3.geo.path().projection(projection);
-				return {path: path, projection: projection};
-			}
-	    });
-	</script>
 	<!-- USA -->
 	<h1>USA</h1>
 	<div id="usa"></div>
-	<script>
-		var map = new Datamap({
-			element: document.getElementById('usa'),
-			geographyConfig: {
-				dataUrl: 'usa.topo.json'
-			},
-			scope: 'usa',
-			fills: {
-				defaultFill: '#bada55'
-			},
-			setProjection: function(element) {
-				var projection = d3.geo.mercator()
-					.center([-120, 54])
-					.scale(250)
-					.translate([element.offsetWidth / 2, element.offsetHeight / 2]);
-				var path = d3.geo.path().projection(projection);
-				return {path: path, projection: projection};
-			}
-		});
-	</script>
 </body>
 </html>
