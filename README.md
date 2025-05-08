@@ -1,3 +1,3 @@
 # Combined Countries
 
-Displays two countries combined in one container using DataMaps. You can add and select other countries by getting their JSON in [GitHub](https://datamaps.github.io/) page of DataMaps.
+Displays a map with two countries combined in a single container using DataMaps. Additional countries can be added or selected by importing their respective JSON data from the official DataMaps [GitHub](https://datamaps.github.io/) repository.
